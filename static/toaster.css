@@ -1,0 +1,76 @@
+/* Estilo do Toaster */
+#snackbar {
+	visibility: hidden;
+	min-width: 250px;
+	max-width: 450px;
+	background-color: #0c1f0d; /* Cor padrão do toaster (verde) */
+	color: #fff;
+	border-radius: 0.5rem;
+	position: fixed;
+	top: -100px; /* Fora da tela inicialmente */
+	right: 20px; /* Posição fixa no canto superior direito */
+	z-index: 1;
+	font-size: 1.25rem;
+	opacity: 0;
+	transition: opacity 0.6s, top 0.6s;
+  }
+
+  #snackbar .content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 1rem;
+  }
+
+  #snackbar .icon {
+	font-size: 2rem;
+  }
+  
+  #snackbar.show {
+	visibility: visible;
+	top: 20px; /* Move para a posição de exibição */
+	opacity: 1;
+  }
+  
+  #snackbar.error {
+	background-color: rgb(235, 192, 187);
+	color: #800000; /* Cor vinho */
+  }
+  
+  #snackbar.success {
+	background-color: #63ad5e;
+	color: #363131;
+  }
+  
+  /* Timebar */
+  #snackbar .timebar {
+	height: 5px;
+	width: 100%;
+	background-color: #363131;
+	animation: timebar 7s linear;
+	border-radius: 0 0 5px 5px; /* Faz com que a timebar acompanhe o estilo do toaster */
+	margin-top: 0.5rem; /* Espaçamento entre a timebar e o conteúdo */
+	position: absolute; /* Para posicionar em relação ao toaster */
+	bottom: 0; /* Encosta na parte inferior do toaster */
+  }
+
+  #snackbar.error .timebar {
+	background-color: #800000;
+  }
+  
+  @keyframes timebar {
+	from { width: 100%; }
+	to { width: 0; }
+  }
+  
+  /* Botão de fechar */
+  #snackbar .close-btn {
+	background: none;
+	border: none;
+	font-size: 2rem;
+	color: inherit;
+	cursor: pointer;
+	margin-left: 10px;
+  }
+  

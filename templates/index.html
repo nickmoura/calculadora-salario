@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Salário Líquido</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='toaster.css') }}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Salário Líquido</h1>
+    <form id="salaryForm">
+      <input type="number" id="salary" name="salary" placeholder="Seu salário bruto em R$">
+      <input type="number" id="outrosDescontos" name="outros_descontos" placeholder="Seus descontos adicionais (fora IRPF e INSS)">
+
+      <button type="submit">Calcular</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <div id="snackbar"></div>
+
+  <script src="{{ url_for('static', filename='calc.js') }}"></script>
+  <script src="{{ url_for('static', filename='interact.js') }}"></script>
+</body>
+</html>
