@@ -4,14 +4,14 @@ Este projeto é uma calculadora de salário líquido que considera as diferentes
 
 ## Tecnologias Utilizadas
 - **Frontend:** HTML, CSS, Bootstrap, JavaScript
-- **Backend:** Python (Flask e Django)
+- **Backend:** Python (Flask)
 
 ## Funcionalidades
 - **Cálculo Automático:** Cálculo do salário líquido com base nas faixas de contribuição do INSS e do IRPF.
 - **Descontos Personalizados:** Permite ao usuário adicionar descontos extras, como plano de saúde, vale-transporte, entre outros.
 
 ## Estrutura do Projeto
-- `app.py` - Arquivo principal para execução do backend em Flask ou Django.
+- `app.py` - Arquivo principal para execução do backend em Flask.
 - `static/` - Pasta que contém os arquivos CSS e JavaScript.
 - `templates/` - Arquivos HTML para renderização das páginas da aplicação.
 
@@ -25,21 +25,17 @@ Este projeto é uma calculadora de salário líquido que considera as diferentes
 
 2. **Instalar Dependências**
     ```bash
-    pip install -r requirements.txt
+    pip install flask
     ```
 
 3. **Rodar a Aplicação**
-    - **Flask**:
       ```bash
       python app.py
       ```
-    - **Django**:
-      ```bash
-      python manage.py runserver
-      ```
+
 
 4. **Acessar a Aplicação**
-    - Abra o navegador e acesse `http://localhost:5000` (Flask) ou `http://localhost:8000` (Django).
+    - Abra o navegador e acesse `http://localhost:5000` ou acesse `https://www.nickmoura.github.io/calculadora-salario.html`.
 
 ## Contribuição
 Contribuições são bem-vindas! Envie um pull request ou entre em contato para mais informações.
