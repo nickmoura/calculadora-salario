@@ -48,7 +48,7 @@ input[type="number"] {
 	border-radius: 0.75rem;
 }
 
-form button {
+form .calc-button {
 	width: 100%;
 	padding: 0.75rem;
 	font-size: 1.25rem;
@@ -61,7 +61,7 @@ form button {
 	cursor: pointer;
 }
 
-button:hover {
+.calc-button:hover {
 	background-color: #45a049;
 }
 

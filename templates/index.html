@@ -4,23 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Salário Líquido</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='toaster.css') }}">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <div class="container">
-    <h1>Calculadora de Salário Líquido</h1>
-    <form id="salaryForm">
-      <input type="number" id="salary" name="salary" placeholder="Seu salário bruto em R$">
-      <input type="number" id="outrosDescontos" name="outros_descontos" placeholder="Seus descontos adicionais (fora IRPF e INSS)">
-
-      <button type="submit">Calcular</button>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Calculadora de Salário Líquido</h1>
+    <form id="salaryForm" class="form-group">
+      <input type="number" id="salary" name="salary" class="form-control mb-3" placeholder="Seu salário bruto em R$">
+      <input type="number" id="outrosDescontos" name="outros_descontos" class="form-control mb-3" placeholder="Seus descontos adicionais (fora IRPF e INSS)">
+      <button type="submit" class="calc-button btn btn-primary btn-block">Calcular</button>
     </form>
-    <div id="result"></div>
+    <div id="result" class="text-center mt-4"></div>
   </div>
   <div id="snackbar"></div>
 
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="{{ url_for('static', filename='calc.js') }}"></script>
   <script src="{{ url_for('static', filename='interact.js') }}"></script>
 </body>
